@@ -10,6 +10,7 @@ const initialComedyMovies = [];
 const initialSeries = [];
 const initialActionSeries = [];
 const initialDramaSeries = [];
+const initialComedySeries = [];
 const initialCastSeries = [];
 
 const useMovieStore = create(
@@ -21,6 +22,7 @@ const useMovieStore = create(
       series: initialSeries,
       actionseries: initialActionSeries,
       dramaseries: initialDramaSeries,
+      comedyseries: initialComedySeries,
       castseries: initialCastSeries,
       moviesReady: false,
       seriesReady: false,
