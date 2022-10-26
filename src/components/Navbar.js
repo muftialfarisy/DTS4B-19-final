@@ -137,8 +137,6 @@ const Navbar = (props) => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
       <MenuItem onClick={handleMenuClose}>
         <p onClick={onLogout}>Logout</p>
       </MenuItem>
@@ -197,15 +195,15 @@ const Navbar = (props) => {
       {/* ))} */}
 
       {/* </MenuItem> */}
-      <MenuItem>
+      {/* <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <FavoriteIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
+      </MenuItem> */}
+      {/* <MenuItem>
         <IconButton
           size="large"
           aria-label="show 17 new notifications"
@@ -216,7 +214,7 @@ const Navbar = (props) => {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
