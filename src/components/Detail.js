@@ -1,55 +1,25 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Tentang from "../containers/Tentang";
 import Fab from "@mui/material/Fab";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
-import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import PemainList from "../containers/PemainList";
-import { Divider } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
 import { useEffect } from "react";
 import tmdb from "../api/tmdb";
 const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/original";
 
-function LinkTab(props) {
-  return (
-    <Tab
-      component="a"
-      onClick={(event) => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
-  );
-}
-const Root = styled("div")(({ theme }) => ({
-  width: "100%",
-  ...theme.typography.body2,
-  "& > :not(style) + :not(style)": {
-    marginTop: theme.spacing(2),
-  },
-}));
-
 const Detail = () => {
-  const [value, setValue] = useState(0);
   const [seriesItem, setItems] = useState([]);
   const { id } = useParams();
   const [pemainItem, setPemainItems] = useState([]);
   const [genresSeries, setGenresSeries] = useState([]);
-  const [genreMovies, setGenreMovies] = useState([]);
   const [videoSeries, setVideoSeries] = useState([]);
-  const [videoMovies, setVideoMovies] = useState([]);
-  const [filmId, setFilmId] = useState("");
   // useEffect(() => {
   //   AOS.init();
   // }, []);
@@ -129,9 +99,6 @@ const Detail = () => {
   }, []);
   console.log(genresSeries);
   console.log(seriesItem.genres);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   let isi;
   // const video = {
   if (videoSeries) {
@@ -150,6 +117,7 @@ const Detail = () => {
       <img
         src={`${BASE_IMAGE_URL}${seriesItem.poster_path}`}
         className="img-fluid h-50"
+        alt={seriesItem.name}
         // style={{ heigth: "100px" }}
       />
     );

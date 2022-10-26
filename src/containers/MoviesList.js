@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardFooter,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
+import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { Box, Button } from "@mui/material";
 
 import "../List.css";
@@ -142,6 +133,7 @@ const MoviesList = () => {
               <img
                 src={`${BASE_IMAGE_URL}${movie.poster_path}`}
                 className="img-fluid"
+                alt={movie.title}
               />
 
               <a href="#!">
@@ -214,6 +206,7 @@ const MoviesList = () => {
               <img
                 src={`${BASE_IMAGE_URL}${action.poster_path}`}
                 className="img-fluid"
+                alt={action.title}
               />
 
               <a href="#!">
@@ -286,6 +279,7 @@ const MoviesList = () => {
               <img
                 src={`${BASE_IMAGE_URL}${comedy.poster_path}`}
                 className="img-fluid"
+                alt={comedy.title}
               />
 
               <a href="#!">

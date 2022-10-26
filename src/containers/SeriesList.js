@@ -1,14 +1,5 @@
-import React, { useState } from "react";
-import {
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardFooter,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
+import React from "react";
+import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import "../List.css";
 import Slider from "react-slick";
 import Fab from "@mui/material/Fab";
@@ -143,6 +134,7 @@ const SeriesList = () => {
               <img
                 src={`${BASE_IMAGE_URL}${tseries.poster_path}`}
                 className="img-fluid"
+                alt={tseries.name}
               />
 
               <a href="#!">
@@ -214,6 +206,7 @@ const SeriesList = () => {
               <img
                 src={`${BASE_IMAGE_URL}${aseries.poster_path}`}
                 className="img-fluid"
+                alt="asries.name"
               />
 
               <a href="#!">
@@ -285,6 +278,7 @@ const SeriesList = () => {
               <img
                 src={`${BASE_IMAGE_URL}${cseries.poster_path}`}
                 className="img-fluid"
+                alt={cseries.name}
               />
 
               <a href="#!">

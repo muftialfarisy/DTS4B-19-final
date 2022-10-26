@@ -6,9 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  Link,
   Route,
-  Routes,
   RouterProvider,
 } from "react-router-dom";
 import Login from "./components/Login";
@@ -17,8 +15,6 @@ import Home from "./components/Home";
 import SeriesList from "./containers/SeriesList";
 import MoviesList from "./containers/MoviesList";
 import Detail from "./components/Detail";
-import Tentang from "./containers/Tentang";
-import PemainList from "./containers/PemainList";
 import Favorites from "./containers/Favorites";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";

@@ -33,7 +33,7 @@ const TentangMovies = () => {
         <h2 className="text-center text-white">About</h2>
       </div>
       <p className="text-start text-white">
-        {seriesItem.overview == "" ? "None" : seriesItem.overview}
+        {seriesItem.overview === "" ? "None" : seriesItem.overview}
       </p>
     </div>
   );

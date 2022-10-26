@@ -1,31 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import KeyboardTabIcon from "@mui/icons-material/KeyboardTab";
-import Box from "@mui/material/Box";
 import Fab from "@mui/material/Fab";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import { Link } from "@mui/material";
 
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardOverlay,
-  MDBCardImage,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
+import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import { useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
 import useMovieStore, {
   selectNewFetchMovies,
   selectMovies,
-  selectMoviesReady,
-  selectSortMovies,
 } from "../store/movie";
 const Top2 = () => {
   const movies = useMovieStore(selectMovies);
@@ -102,6 +90,7 @@ const Top2 = () => {
               <img
                 src={`${BASE_IMAGE_URL}${movie.poster_path}`}
                 className="img-fluid"
+                alt={movie.title}
               />
 
               <a href="#!">

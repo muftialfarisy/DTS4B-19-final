@@ -1,24 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import KeyboardTabIcon from "@mui/icons-material/KeyboardTab";
-import Box from "@mui/material/Box";
 import Fab from "@mui/material/Fab";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import { Link } from "@mui/material";
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardOverlay,
-  MDBCardImage,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
+import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import { Button } from "@mui/material";
 import useMovieStore, {
   selectSeries,
   selectNewFetchSeries,
@@ -29,6 +19,9 @@ const TopList = () => {
   const fetchSeries = useMovieStore(selectNewFetchSeries);
   const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/original";
 
+  useEffect(() => {
+    fetchSeries();
+  }, []);
   const settings = {
     className: "center",
     centerMode: true,
@@ -66,9 +59,6 @@ const TopList = () => {
     ],
   };
 
-  useEffect(() => {
-    fetchSeries();
-  }, []);
   return (
     <div className="list">
       <div>
@@ -93,6 +83,7 @@ const TopList = () => {
               <img
                 src={`${BASE_IMAGE_URL}${serie.poster_path}`}
                 className="img-fluid"
+                alt={serie.name}
               />
 
               <a href="#!">

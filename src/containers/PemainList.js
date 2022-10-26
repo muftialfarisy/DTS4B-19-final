@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
@@ -6,17 +6,11 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import tmdb from "../api/tmdb";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/original";
 
 const PemainList = ({ pemainn }) => {
-  const [pemainItem, setPemainItems] = useState([]);
-  const { id } = useParams();
-
   const flexContainer = {
     display: "flex",
     flexDirection: "row",
