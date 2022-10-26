@@ -1,19 +1,14 @@
-# DTS REA4 Final Project
+WELCOME TO MYDRAKOR LIST
 
-Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk). 
+video dokumentasi : https://drive.google.com/file/d/1ctkxcTHsLOmh1VByLL9umquj3hJUpfiC/view?usp=sharing
 
-## Daftar pair
+link live app : [React App (mydrakorlist.netlify.app)](https://mydrakorlist.netlify.app/)
+mydrakorlist.netlify.app
 
-Tugas dikerjakan secara berpasangan, untuk daftar kelompok bisa dilihat pada masing-masing Classroom atau Discord Class.
+penjelasan :
 
-## Fork and Clone
+website ini merupakan wesbsite untuk melihat list drakor menggunakan tmdb API.
+kita bisa melihat detail dari trailler atau poster, nama pemeran serta penjelasan dari drakor tersebut.
+bisa login dan register.
 
-Mohon perwakilan dari pair bisa melakukan fork repo ini dan clone, untuk repositori yang di fork menggunakan penamaan:
-
-`dts4[a/b/c]-[nomor pair]-final`
-
-Contoh: `dts4a-01-final`
-
-## Branching, commit
-
-Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun hasil akhirnya harus di merge ke branch `main` dan di push ke Github. Pastikan hasil akhir kode sudah ter-push!
+note : saya mufti alfarisy pair 19 bekerja sendiri tanpa pair saya
