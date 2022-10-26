@@ -1,5 +1,7 @@
 .App {
+  margin: 0;
   text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -35,4 +37,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+.nav-inactive {
+  color: black;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.nav-active {
+  color: black;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-underline-offset: 5px;
+}
+.nav-inactive-black {
+  color: white;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.nav-active-black {
+  color: white;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-underline-offset: 5px;
 }
