@@ -123,7 +123,7 @@ const useMovieStore = create(
       fetchActionSeries: async () => {
         try {
           const { data } = await tmdb.get(
-            "discover/tv?include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&with_genres=18&with_original_language=ko&page=1"
+            "discover/tv?api_key=e83c60df8d74070453c0e741dfb15119&include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&with_genres=18&with_original_language=ko&page=1"
           );
 
           set(
@@ -139,7 +139,7 @@ const useMovieStore = create(
       fetchComedySeries: async () => {
         try {
           const { data } = await tmdb.get(
-            "discover/tv?include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&with_genres=35&with_original_language=ko&page=1"
+            "discover/tv?api_key=e83c60df8d74070453c0e741dfb15119&include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&with_genres=35&with_original_language=ko&page=1"
           );
 
           set(
@@ -155,7 +155,7 @@ const useMovieStore = create(
       fetchCastSeries: async () => {
         try {
           const { data } = await tmdb.get(
-            "discover/tv?include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&with_genres=35&with_original_language=ko&page=1"
+            "discover/tv?api_key=e83c60df8d74070453c0e741dfb15119&include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&with_genres=35&with_original_language=ko&page=1"
           );
 
           set(
